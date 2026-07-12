@@ -2,6 +2,7 @@ from decimal import Decimal
 
 from playwright.sync_api import Page
 
+
 class CheckoutTwo:
     URL = "https://www.saucedemo.com/checkout-step-two.html"
 
@@ -21,7 +22,6 @@ class CheckoutTwo:
         self.total = page.locator('[data-test="total-label"]')
 
         self.finish_button = page.locator('[data-test="finish"]')
-        
 
     def load(self):
         self.page.goto(self.URL)
@@ -34,7 +34,8 @@ class CheckoutTwo:
 
     def total_value(self) -> Decimal:
         return Decimal(self.total.inner_text().split("$")[-1])
-    
+
     def summed_item_value(self) -> Decimal:
-        return sum(Decimal(num.split("$")[-1]) for num in self.item_prices.all_inner_texts())
-        
+        return sum(
+            Decimal(num.split("$")[-1]) for num in self.item_prices.all_inner_texts()
+        )

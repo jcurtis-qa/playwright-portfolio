@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+
 class CheckoutOne:
     URL = "https://www.saucedemo.com/checkout-step-one.html"
 
@@ -10,7 +11,7 @@ class CheckoutOne:
         self.title = page.locator('[data-test="title"]')
 
         self.shopping_cart = page.locator('[data-test="shopping-cart-link"]')
-   
+
         self.first_name = page.locator('[data-test="firstName"]')
         self.last_name = page.locator('[data-test="lastName"]')
         self.postal_code = page.locator('[data-test="postalCode"]')

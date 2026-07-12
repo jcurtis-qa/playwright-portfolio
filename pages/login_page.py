@@ -1,5 +1,6 @@
 from playwright.sync_api import Page
 
+
 class LoginPage:
     URL = "https://www.saucedemo.com"
 
