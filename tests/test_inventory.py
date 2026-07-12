@@ -15,10 +15,10 @@ def test_sort_ascending(logged_in_page: Page):
     inventory_page = InventoryPage(logged_in_page)
 
     # Sort items by ascending price
-    inventory_page.select_sort('Price (low to high)')
+    inventory_page.select_sort("Price (low to high)")
 
     # Use expect to await confirmation of sort
-    expect(inventory_page.sort_dropdown).to_have_value('lohi')
+    expect(inventory_page.sort_dropdown).to_have_value("lohi")
 
     # Get the list of all inventory prices
     prices = [float(t.removeprefix("$")) for t in inventory_page.item_prices.all_text_contents()]

@@ -14,8 +14,13 @@ class InventoryPage:
 
         self.item_prices = page.locator('[data-test="inventory-item-price"]')
 
+        self.shopping_cart = page.locator('[data-test="shopping-cart-link"]')
+
     def load(self):
         self.page.goto(self.URL)
 
     def select_sort(self, option: str):
         self.sort_dropdown.select_option(label=option)
+
+    def add_to_cart(self, product_name: str):
+        self.page.locator(f'[data-test="add-to-cart-{product_name}"]').click()

@@ -12,7 +12,7 @@ def test_standard_user_can_log_in(page: Page):
     login_page.load()
 
     # Log in using standard user's credentials
-    login_page.login('standard_user', 'secret_sauce')
+    login_page.login("standard_user", "secret_sauce")
     
     # Ensure we have navigated to the inventory page
     expect(page).to_have_url("https://www.saucedemo.com/inventory.html")
