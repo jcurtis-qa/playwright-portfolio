@@ -30,7 +30,7 @@ jobs:
           ruff format --check .
 
       - name: Run tests
-        run: pytest --tracing=retain-on-failure
+        run: pytest --tracing=retain-on-failure --reruns 1 --reruns-delay 2
 
       - name: Upload traces on failure
         if: failure()

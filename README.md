@@ -1,5 +1,7 @@
 # Playwright Test Automation Portfolio
 
+![CI](https://github.com/jcurtis-qa/playwright-portfolio/actions/workflows/ci.yml/badge.svg)
+
 This repository demonstrates a step-by-step creation of a Playwright Test Suite from scratch to fully functional end-to-end UI tests utilizing Python + Playwright.
 
 The tests run against [SauceDemo](https://www.saucedemo.com), SauceLabs' open demo site for automation practice.
@@ -57,5 +59,5 @@ Details worth noticing:
 ## Roadmap
 
 - Session-scoped authentication via `storage_state`
-- GitHub Actions CI running the suite on every push
+- ~~GitHub Actions CI running the suite on every push~~
 - Cross-browser runs (Firefox/WebKit)
